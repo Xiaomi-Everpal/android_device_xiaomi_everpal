@@ -23,4 +23,5 @@ import /product/etc/props/${ro.boot.board_id}.prop
 ro.bpf.kver_override=5.4.186
 
 # Skia tracing
-debug.hwui.skia_atrace_enabled=false
+debug.hwui.skia_tracing_enabled=false
+debug.hwui.skia_use_perfetto_track_events=false
