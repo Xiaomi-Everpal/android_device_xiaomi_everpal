@@ -21,3 +21,6 @@ import /product/etc/props/${ro.boot.board_id}.prop
 
 # eBPF
 ro.bpf.kver_override=5.4.186
+
+# Skia tracing
+debug.hwui.skia_atrace_enabled=false
