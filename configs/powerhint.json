@@ -116,30 +116,30 @@
       "Name": "GPUSchedPeriod",
       "Path": "/sys/devices/platform/13000000.mali/js_scheduling_period",
       "Values": [
-        "100",
-        "75",
         "50",
-        "0"
+        "75",
+        "100"
       ],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
+      "DefaultIndex": 2,
+      "ResetOnInit": true
     },
     {
       "Name": "GPUDVFSInterval",
       "Path": "/sys/devices/platform/13000000.mali/dvfs_period",
       "Values": [
-        "100",
+        "50",
         "75",
-        "50"
+        "100"
       ],
-      "ResetOnInit": true,
-      "DefaultIndex": 0
+      "DefaultIndex": 2,
+      "ResetOnInit": true
     },
     {
       "Name": "FGBoostPerf",
       "Path": "/proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_boost",
       "Values": [
         "0",
+        "25",
         "50",
         "100"
       ],
@@ -258,13 +258,19 @@
     {
       "Name": "PowerHALAudioState",
       "Path": "vendor.powerhal.audio",
-      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Values": [
+        "AUDIO_STREAMING_LOW_LATENCY",
+        ""
+      ],
       "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
-      "Values": ["EXPENSIVE_RENDERING", ""],
+      "Values": [
+        "EXPENSIVE_RENDERING",
+        ""
+      ],
       "Type": "Property"
     }
   ],
@@ -282,12 +288,6 @@
       "Value": "968000"
     },
     {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "985000"
-    },
-    {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "PowerHALMainState",
       "Duration": 0,
@@ -297,19 +297,55 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "2400000"
+      "Value": "1837000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
-      "Value": "2000000"
+      "Value": "1500000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUSchedMode",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1274000"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1500000"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "FGBoostPerf",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "UclampMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "FGUclampMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "TAUclampMin",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
@@ -321,7 +357,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1500000"
+      "Value": "1287000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -333,19 +369,13 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "1534000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "DRAMOppMin",
-      "Duration": 0,
-      "Value": "0"
+      "Value": "1418000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "FBTBHROPP",
       "Duration": 0,
-      "Value": "15"
+      "Value": "9"
     },
     {
       "PowerHint": "INTERACTION",
@@ -357,19 +387,19 @@
       "PowerHint": "INTERACTION",
       "Node": "FGBoostPerf",
       "Duration": 0,
-      "Value": "50"
+      "Value": "25"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampMin",
       "Duration": 0,
-      "Value": "50"
+      "Value": "25"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "FGUclampMin",
       "Duration": 0,
-      "Value": "50"
+      "Value": "25"
     },
     {
       "PowerHint": "INTERACTION",
@@ -399,7 +429,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 3000,
-      "Value": "2000000"
+      "Value": "1750000"
     },
     {
       "PowerHint": "LAUNCH",
@@ -423,19 +453,19 @@
       "PowerHint": "LAUNCH",
       "Node": "FGUclampMin",
       "Duration": 3000,
-      "Value": "100"
+      "Value": "75"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampMin",
       "Duration": 3000,
-      "Value": "100"
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUBlockBoost",
       "Duration": 3000,
-      "Value": "101"
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -447,25 +477,25 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "2400000"
+      "Value": "1534000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1750000"
+      "Value": "1287000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUSchedPeriod",
       "Duration": 0,
-      "Value": "100"
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUDVFSInterval",
       "Duration": 0,
-      "Value": "75"
+      "Value": "50"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -483,13 +513,13 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "UclampMin",
       "Duration": 0,
-      "Value": "50"
+      "Value": "25"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "FGUclampMin",
       "Duration": 0,
-      "Value": "50"
+      "Value": "25"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
